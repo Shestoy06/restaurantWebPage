@@ -1,0 +1,528 @@
+// Reset default styles -----
+@import "nullStyle.scss";
+// --------------------------
+
+// Fonts --------------------
+@font-face {
+  font-family: 'Akzidenz';
+  src: url('../../fonts/akzidenz-grotesk-bq-bold-condensed.otf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap');
+// --------------------------
+
+// Main styles --------------
+body {
+  font-family: Arial, sans-serif;
+  color: #000;
+  max-width: 1368px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: auto 1fr 125px ;
+}
+
+a {
+  color: #000;
+}
+
+.wrapper {
+  max-width: 870px;
+  margin: 0 auto;
+  height: 100%;
+
+}
+
+.main {
+  &__screen {
+    margin: 0 0 75px 0;
+  }
+  &__menu {
+    margin: 0 0 80px 0;
+  }
+  &__choose {
+    margin: 0 0 82px 0;
+  }
+  &__contacts {
+    margin: 0 0 24px 0;
+  }
+}
+// Header ---------------
+.header {
+  padding: 28px 0 0;
+  &__content {
+    height: 100%;
+  }
+  &__first-line {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.8em;
+
+
+  }
+}
+.first-line {
+  margin: 0 0 14px 0;
+  &__languages {
+    font-family: 'Bebas Neue', sans-serif;
+
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 20px;
+  }
+
+  &__item-link {
+    transition-duration: 0.5s;
+    text-decoration: underline;
+  }
+  &__item-link:hover,   {
+    color: #fff;
+    padding: 5px;
+    background-color: #000;
+    text-decoration: none;
+  }
+
+  &__order-link {
+    font-family: 'Akzidenz', sans-serif;
+    text-decoration: underline;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+.second-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 24px 0;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item + &__item {
+    margin-left: 46px;
+  }
+
+  &__link {
+    font-family: 'Akzidenz', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+.third-line {
+  margin: 0 0 20px 0;
+  &__header {
+    text-align: center;
+  }
+}
+// ----------------------
+
+// First screen ---------
+
+.screen {
+  display: flex;
+  height: calc(100vh - 170px);
+  &__image {
+    flex: 1 1 50%;
+    width: 100%;
+
+  }
+  &__image img {
+    width: 100.5%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  &__block {
+    flex: 1 1 50%;
+    background-color: #000;
+  }
+
+  &__body {
+    color: #fff;
+    margin: 0 0 0 11%;
+    padding: 0 0 30px 0;
+  }
+
+  &__title {
+    font-family: 'Akzidenz', sans-serif;
+    //font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 82px 0 0 0;
+
+    font-size: calc(50px + 10 * (100vw / 1330));
+  }
+
+  &__text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 37px 0 55px 0;
+    max-width: 304px;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__button {
+    margin: 0 20px 0 0;
+  }
+}
+.button {
+  display: block;
+  width: 155px;
+  background-color: #fff;
+  height: 50px;
+  transition: width 0.5s;
+  &:hover {
+    width: 170px;
+    .button__text {
+      font-size: 1.7rem;
+    }
+
+  }
+  &__text {
+    height: 100%;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 15px 0 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.42rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    transition: 1s;
+  }
+}
+.view-menus {
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 12px 0 0;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+// ----------------------
+
+// Menu -----------------
+.menu {
+  &__content {
+  }
+  &__items {
+    display: flex;
+  }
+  &__image {
+    margin: 0 0 25px 0;
+  }
+
+  &__body {
+    padding: 0 8px;
+  }
+
+  &__title {
+    font-family: 'Akzidenz', sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    max-width: 102px;
+    margin: 0 0 36px 0;
+  }
+
+  &__text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+
+    margin: 0 0 32px 0;
+  }
+
+  &__button {
+    background-color: #000;
+    margin: 0 0 29px 0;
+  }
+
+  &__link {
+    color: #000;
+  }
+}
+.button {
+
+  &__text_white {
+    color: #fff;
+  }
+}
+.view-menus {
+  color: #000;
+}
+// ----------------------
+
+// Choose  --------------
+.choose .wrapper {
+}
+.choose {
+  &__banner {
+    display: flex;
+  }
+
+  &__block {
+    position: relative;
+    flex: 1 1 50%;
+    background-color: #000;
+  }
+
+  &__text {
+    font-family: 'Akzidenz', sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    padding: 0 0 0 20px;
+    position: absolute;
+    top: 35%;
+    right: 41px;
+    bottom: 40%;
+  }
+  
+  @media screen and (max-width: 1123px) {
+    .choose__text {
+
+    }
+  }
+
+  &__image {
+    flex: 1 1 50%;
+  }
+
+  &__image img {
+    max-width: 100%;
+  }
+
+  &__category {
+    background-color: #ebebeb;
+    padding: 50px 0;
+  }
+
+  &__items {
+  }
+
+  &__item {
+  }
+}
+.wrapper {
+}
+.profits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 50px 1fr;
+}
+.profit:nth-child(3), .profit:nth-child(4) {
+  grid-row: 3/4;
+}
+.profit {
+  display: flex;
+  &__image {
+    margin: 0 12px 0 0;
+  }
+
+  &__body {
+  }
+
+  &__title {
+    font-family: 'Akzidenz', sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    margin: 0 0 25px 0;
+  }
+
+  &__text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;
+  }
+}
+// ----------------------
+
+// Contacts -------------
+.contacts {
+  &__content {
+  }
+
+  &__title {
+    font-family: 'Akzidenz', sans-serif;
+    font-size: 50px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    margin: 0 0 32px 0;
+  }
+
+}
+.social {
+  &__grid {
+    display: grid;
+    row-gap: 23px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+  
+  &__item {
+    display: flex;
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+
+
+  &__icon {
+    margin: 0 10px 0 0;
+  }
+
+  &__coordinates {
+    order: 1;
+  }
+
+  &__telephone {
+    order: 4;
+  }
+
+  &__email {
+    order: 2;
+  }
+
+  &__media {
+    order: 4;
+  }
+}
+.media {
+  &__icon + &__icon{
+    margin: 0 0 0 31px;
+  }
+
+}
+// ----------------------
+
+// Form -----------------
+.form {
+  display: flex;
+  &__image {
+    flex: 1 1 50%;
+  }
+  &__image img {
+    max-width: 100%;
+  }
+
+  &__block {
+    flex: 1 1 50%;
+    padding: 54px 0 0 60px;
+    background-color: #000;
+  }
+
+  &__title {
+    font-family: 'Akzidenz', sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+
+    margin: 0 0 28px 0;
+  }
+
+  &__group {
+    position: relative;
+    margin: 0 0 25px 0;
+    &_large {
+    }
+  }
+
+  &__input {
+    width: 374px;
+    height: 50px;
+    background-color: #252525;
+    border: 2px solid #959595;
+    color: #fff;
+    padding: 0 0 0 10px;
+    &_large {
+      height: 100px;
+      padding: 10px;
+    }
+  }
+  &__input::placeholder {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    color: #959595;
+  }
+  &__input_large::placeholder {
+    padding: 0;
+  }
+}
+// ----------------------
+
+// Footer ---------------
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 0;
+  }
+  
+  &__body {
+    display: flex;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #4d4d4d;
+  }
+
+  &__copyright {
+  }
+
+  &__terms {
+    text-decoration: underline;
+  }
+
+  &__logo {
+  }
+}
+
+.wrapper {
+}
